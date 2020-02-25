@@ -1,6 +1,5 @@
 package com.kmne68.hibernate.demo;
 
-import java.sql.PreparedStatement;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -20,10 +19,7 @@ public class FindEmployeeByCompany {
 								 .buildSessionFactory();
 		
 		// create session		
-		Session session = factory.getCurrentSession();		
-
-		PreparedStatement ps = null;
-		final String sql = "SELECT * from Employee e WHERE e.employer = ?";
+		Session session = factory.getCurrentSession();
 		
 		try {
 			
@@ -36,12 +32,11 @@ public class FindEmployeeByCompany {
 			displayEmployees(employees);
 				
 			// query employees where employer = ?
-			employees = session.createQuery("from Employee e where e.employer = " + employer).getResultList();
-		
-			
+			System.out.println("Get employee by company: ");
+			employees = session.createQuery("from Employee e where e.company = '" + employer + "'").getResultList();
 			
 			// display the new list
-			System.out.println("The employees whose employer is the " + employer +  " are: ");
+			System.out.println("The employees whose employer is " + employer +  " are: ");
 			displayEmployees(employees);
 			
 		} catch(Exception e) {
@@ -58,6 +53,7 @@ public class FindEmployeeByCompany {
 		for(Employee  e : employees) {
 			System.out.println(e);
 		}
-	}	
+	}
+	
 
 }

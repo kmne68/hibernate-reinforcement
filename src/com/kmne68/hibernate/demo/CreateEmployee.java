@@ -23,7 +23,7 @@ public class CreateEmployee {
 		try {
 			
 			System.out.println("Creating new employee...");
-			Employee employee = new Employee("Sam", "Gamgee", "Garden Center");
+			Employee employee = new Employee("Meriadoc", "Brandybuck", "Swordthains");
 			
 			session.beginTransaction();
 			

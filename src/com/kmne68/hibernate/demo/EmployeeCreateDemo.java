@@ -18,8 +18,11 @@ public class EmployeeCreateDemo {
 		ReadEmployee re = new ReadEmployee();
 		re.readEmployee(2);
 
-		FindEmployeeByCompany febi = new FindEmployeeByCompany();
-		febi.findEmployeeById("Mill");
+		FindEmployeeByCompany febc = new FindEmployeeByCompany();
+		febc.findEmployeeById("Garden Center");
+		
+		DeleteEmployeeById debi = new DeleteEmployeeById();
+		debi.deleteEmployeeByEd(4);
 		
 	}
 	

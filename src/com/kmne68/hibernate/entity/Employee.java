@@ -41,9 +41,10 @@ public class Employee {
 	}
 	
 	
-	public Employee(String lastName, String firstName, String company) {
-		this.lastName = lastName;
+	public Employee(String firstName, String lastName, String company) {
+
 		this.firstName = firstName;
+		this.lastName = lastName;
 		this.company = company;
 	}
 	
@@ -69,7 +70,7 @@ public class Employee {
 	
 	
 	public String getFirstName() {
-		return this.lastName;
+		return this.firstName;
 	}
 	
 	
